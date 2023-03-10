@@ -13,7 +13,6 @@ export default function LoadData() {
         setTotalCart,
         setTotalProducts
     } = useContext(ProductsContext)
-
     useEffect(() => {
         (async () => {
             try {

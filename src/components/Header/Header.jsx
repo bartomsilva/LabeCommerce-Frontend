@@ -39,13 +39,15 @@ export default function Header() {
                         placeholder="O que está procurando?" />
                     <h.FindImg onClick={filterIsOn} src="/static/icons/search.svg" alt="button search" />
                 </h.BoxFind>
-                <h.CadUser>
-                    <span>Olá, </span><a href='#'>faça seu login</a> ou <a href='#'>cadastre-se</a>
-                </h.CadUser>
-                <h.Cart>
-                    <span>{itemsCart}</span>
-                    <img onClick={() => setViewCart(true)} src="/static/icons/cart_view.svg" alt='cart image' />
-                </h.Cart>
+                <h.BoxAux>
+                    <h.CadUser>
+                        <span>Olá, </span><a href='#'>faça seu login</a> ou <a href='#'>cadastre-se</a>
+                    </h.CadUser>
+                    <h.Cart>
+                        <span>{itemsCart}</span>
+                        <img onClick={() => setViewCart(true)} src="/static/icons/cart_view.svg" alt='cart image' />
+                    </h.Cart>
+                </h.BoxAux>
             </h.Container>
             <MenuMobile />
             <h.Sections>

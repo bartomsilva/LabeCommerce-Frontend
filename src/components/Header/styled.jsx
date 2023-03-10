@@ -11,6 +11,7 @@ export const Header = styled.header`
     position: sticky;
     top: 0;
     z-index: 999999;
+
 `;
 
 export const Container = styled.div`    
@@ -24,6 +25,11 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @media(max-width: 768px){
+        justify-content: center;
+        width: 100vw;
+    }
 `;
 
 export const Logo = styled.div`
@@ -60,7 +66,7 @@ export const BoxFind = styled.div`
     cursor: pointer;
     grid-area: boxfind;
 
-    @media (max-width: 768px){
+    @media (max-width: 1300px){
         width: 100%;
     }
 
@@ -76,10 +82,18 @@ export const BoxFind = styled.div`
      
 `;
 
+export const BoxAux = styled.div`
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+`
+
 export const CadUser = styled.div`
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
-    width: 25%;  
-    margin-right: 190px;
 
     a{
         filter: var(--colorSvg);
@@ -87,23 +101,18 @@ export const CadUser = styled.div`
     grid-area:caduser;
 
     span{
+        display: block;
         color: #666666
     }
-    text-align: right;
-
-    @media (max-width: 768px){
-        flex: 1;
-    }
+   
 
 `;
 
 export const Cart = styled.div`
-    width: fit-content;
-    min-width: 40px;
+    width: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     
     span{
         width: 20px;
@@ -125,16 +134,16 @@ export const Cart = styled.div`
     }
 
     grid-area: cart;
-    text-align: right;
+    /* text-align: right; */
 
     :active {
         transition: 500ms all;
         transform: scale(1.1);
     }
       
-    @media (max-width: 768px){
+    /* @media (max-width: 768px){
         flex: 1;
-    }
+    } */
 
 `;
 

@@ -35,16 +35,34 @@ export const Item = styled.div`
     overflow: hidden;
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px;
     border-radius: 5px;
+
+    @media(max-width: 768px){
+        display: grid;
+        width: 95%;
+        grid-template-columns: 80px 260px;
+        grid-template-rows: 200px;
+        grid-template-areas:
+        "image "
+        ;
+    }
 `;
 
+export const ContainerImage = styled.div`
+    grid-area: "image containerinfo";
+    
+`
+
 export const Image = styled.img`
-    /* width: 80%;
-    width: 90%; */
-     width: 60%;
+    width: 60%;
     width: 70%;
     object-fit: cover;
     z-index: 999;
     margin-top: 15px;
+
+    @media(max-width: 768px){
+        width: 100%;              
+
+    }
  
 `;
 
@@ -52,17 +70,26 @@ export const ContainerInfo = styled.div`
     display: flex; 
     flex-direction: column;
     align-items: flex-start;  
-    /* justify-content: center;  */
     height: 140px;
     width: 90%;
     position: absolute;
     bottom: 0;
+    grid-area: "containerinfo";
+
+    @media(max-width:768px){
+        flex-direction: row;
+        width: 250px;
+    }
+
 `;
 
 export const Info = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    grid-area: "info";
+
+    width: fit-content;
 `;
 
 export const Title = styled.span`
@@ -98,10 +125,14 @@ export const ImgAddCart = styled.div`
     width: 30px;
     height: 30px;
     filter: var(--colorSvg);
+    grid-area: "addcart";
 
     :active {
         transition: 500ms all;
         transform: scale(1.5);
+    }
+    @media(max-width:768px){
+        position: inherit;
     }
 `;
 

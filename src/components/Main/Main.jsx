@@ -3,7 +3,7 @@ import { ProductsContext } from '../Context/ProductsContext'
 
 import filterItems from "../Filter/Filter";
 import { currencyBrazil, sortArrayAD } from '../Libs/MyLib'
-import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image } from "./styled";
+import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage } from "./styled";
 
 
 export default function Main() {
@@ -23,9 +23,9 @@ export default function Main() {
                 {
                     arrayRender.map(prod => (
                         <Item key={prod.code} >
-                            <div>
+                            <ContainerImage>
                                 <Image id={prod.code} src={prod.img} ></Image>
-                            </div>
+                            </ContainerImage>
                             <ContainerInfo>
                                 <Info>
                                     <Title>{prod.name}</Title>

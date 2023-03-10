@@ -5,7 +5,7 @@ import Aside from "./components/Aside/Aside"
 import Main from "./components/Main/Main"
 import Footer from "./components/Footer/Footer"
 import ShoppingCart, { updateStatusCart } from "./components/ShoppingCart/ShoppingCart"
-import { Container } from "./Styles/styled"
+import { Container } from "./styles/styled"
 
 export default function App() {
   const { viewCart } = useContext(ProductsContext)

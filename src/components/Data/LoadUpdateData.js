@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react"
 import { ProductsContext } from "../Context/ProductsContext"
 import axios from "axios"
 import { saveCart } from "../Libs/MyLib"
-import { updateStatusCart } from "../Shoppingcart/ShoppingCart"
+import { updateStatusCart } from "../ShoppingCart/ShoppingCart"
 
 export default function LoadData() {
     const {

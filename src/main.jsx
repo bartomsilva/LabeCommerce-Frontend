@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import ProductsProvider from './components/Context/ProductsContext'
@@ -8,12 +8,14 @@ import Reset from './styles/Reset'
 import Base from './styles/base'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Reset />
-    <Base />
-    <ProductsProvider>
-      <LoadUpdateData/>
-      <App />
-    </ProductsProvider>
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Reset />
+      <Base />
+      <ProductsProvider>
+        <LoadUpdateData />
+        <App />
+      </ProductsProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 )

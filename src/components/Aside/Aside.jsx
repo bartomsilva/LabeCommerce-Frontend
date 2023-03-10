@@ -2,8 +2,8 @@ import { useRef,useContext } from 'react'
 import { ProductsContext } from '../Context/ProductsContext'
 
 import { FindImg } from '../Header/styled'
-import { currencyBrazil, nameSector, orderArray } from '../libs/MyLib'
-import { Select } from '../libs/Select/Select'
+import { currencyBrazil, nameSector, orderArray } from '../Libs/MyLib'
+import { Select } from '../Libs/Select/Select'
 import * as s from './AsideStyled'
 
 export default function Aside() {

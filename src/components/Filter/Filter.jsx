@@ -1,4 +1,4 @@
-import {removeAccent} from '../libs/MyLib.jsx'
+import {removeAccent} from '../Libs/MyLib.jsx'
 
 import { useContext } from 'react'
 import { ProductsContext } from '../Context/ProductsContext.jsx'

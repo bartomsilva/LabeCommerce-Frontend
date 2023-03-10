@@ -35,6 +35,15 @@ export const Logo = styled.div`
         grid-area: logo;     
         margin-bottom: 1.5rem;        
     };
+
+    @media (max-width: 768px){
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;       
+    }
+
  
 `;
 
@@ -71,6 +80,7 @@ export const CadUser = styled.div`
     font-weight: bold;
     width: 25%;  
     margin-right: 190px;
+
     a{
         filter: var(--colorSvg);
     }
@@ -93,6 +103,7 @@ export const Cart = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     
     span{
         width: 20px;

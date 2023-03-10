@@ -2,24 +2,23 @@ import styled from "styled-components";
 
 export const ContaninerMenuMobile = styled.div`
     position: absolute;
-    top: 0;
+    top: 45px;
     left: 0;
-    z-index: 1000;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0; 
-    pointer-events: none;
+    z-index: 10000;
+
+    width: ${({ isOpen }) => isOpen ? "100vw" : "0vw"};;
+    height: ${({ isOpen }) => isOpen ? "100vh" : "0vh"};; 
+    opacity: 1; 
         
     @media(max-width:768px){
-        opacity: 1;
-        pointer-events: auto;
+        opacity: 1; 
     }
     
     ul{
         width: 100%; 
         height: calc(100vh - 30px);  
         position: absolute;
-        visibility: ${({ isOpen }) => isOpen ? "visible" : "hidden"};;
+        visibility: ${({ isOpen }) => isOpen ? "visible" : "hidden"};
         background-color: ${({ isOpen }) => isOpen ? "#f3f3f3" : "#transparent"};
         left: ${({ isOpen }) => isOpen ? "0px" : "-101vw"};
         transition: all linear 200ms;        
@@ -58,9 +57,16 @@ export const HeaderMenu = styled.div`
     background-color: #ef7d12;
     display: flex;
     align-items: center;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    width: 100vw;
+    
+    
     button{
-        width: 25px;
-        height: 25px;
+        width: 45px;
+        height: 45px;
         margin: 0 1rem;
         background: url(${({ isOpen }) => isOpen ? "/static/icons/menu_close.svg" : "/static/icons/menu_open.svg"});
         background-repeat: no-repeat;
@@ -70,4 +76,9 @@ export const HeaderMenu = styled.div`
         transition: all linear 300ms;
         cursor: pointer;
     }
+
+    @media(max-width:768px){
+        opacity: 1; 
+    }
+
 `

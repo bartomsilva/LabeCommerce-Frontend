@@ -1,6 +1,6 @@
 import { useRef, useContext, useState } from 'react'
 import * as h from './styled'
-import {ProductsContext} from '../Context/ProductsContext'
+import { ProductsContext } from '../Context/ProductsContext'
 import { ContaninerMenuMobile, HeaderMenu } from "./stelydMenuMobile";
 
 const filterIsOn = () => {
@@ -19,14 +19,14 @@ export default function Header() {
 
     const {
         itemsCart,
-        setViewCart, 
+        setViewCart,
         setFilterName,
         setFilterSector
-    }= useContext(ProductsContext)
+    } = useContext(ProductsContext)
 
     const nameFind = useRef(null)
 
-  
+
 
     return (
         <h.Header>
@@ -47,7 +47,7 @@ export default function Header() {
                     <img onClick={() => setViewCart(true)} src="/static/icons/cart_view.svg" alt='cart image' />
                 </h.Cart>
             </h.Container>
-            <MenuMobile/>
+            <MenuMobile />
             <h.Sections>
                 <h.ButtonSelect onClick={(e) => handleOnChange(e, setFilterSector)} value='all'>Ver Todos</h.ButtonSelect>
                 <h.ButtonSelect onClick={(e) => handleOnChange(e, setFilterSector)} value='toys'>Brinquedos</h.ButtonSelect>
@@ -67,29 +67,31 @@ function MenuMobile() {
     const handleMenu = () => setIsOpen(!isOpen)
     const {
         itemsCart,
-        setViewCart, 
+        setViewCart,
         setFilterName,
         setFilterSector
-    }= useContext(ProductsContext)
-    
-    const handleOnChangeMobile=(e,setState)=>{
+    } = useContext(ProductsContext)
+
+    const handleOnChangeMobile = (e, setState) => {
         handleOnChange(e, setState)
         setIsOpen()
     }
 
     return (
-        <ContaninerMenuMobile isOpen={isOpen}>
+        <>
             <HeaderMenu>
                 <button onClick={handleMenu}></button>
             </HeaderMenu>
-            <ul>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='all'>Todos Produtos</button></li>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='toys'>Brinquedos</button></li>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='schoolbags'>Mochilas</button></li>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='mugs'>Canecas</button></li>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='shirts'>Camisas</button></li>
-                <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='shoes'>Tênis</button></li>
-            </ul>
-        </ContaninerMenuMobile>
+            <ContaninerMenuMobile isOpen={isOpen}>
+                <ul>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='all'>Todos Produtos</button></li>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='toys'>Brinquedos</button></li>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='schoolbags'>Mochilas</button></li>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='mugs'>Canecas</button></li>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='shirts'>Camisas</button></li>
+                    <li><button onClick={(e) => handleOnChangeMobile(e, setFilterSector)} value='shoes'>Tênis</button></li>
+                </ul>
+            </ContaninerMenuMobile>
+        </>
     )
 }

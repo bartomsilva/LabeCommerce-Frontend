@@ -14,6 +14,15 @@ const Base = createGlobalStyle`
     margin: 0 auto;
 		background-color: #ffffff;
         font-family: var(--fontPadrao);
+
+    @media(max-width:768px){
+      /* body::-webkit-scrollbar {
+        display: none;
+      } */
+      ::-webkit-scrollbar{
+        display: none;
+      }
+    }
       
 	}
 

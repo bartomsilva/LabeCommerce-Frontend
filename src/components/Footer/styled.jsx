@@ -11,6 +11,7 @@ export const Footer = styled.footer`
     height: fit-content;
     margin-top: 20px;
     background-color: #f1f1f1;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 
     /* aviso de em desenvolvimento */
     h3{
@@ -134,11 +135,6 @@ export const PaymentsForms = styled.div`
 `;
 
 
-export const Title = styled.p`
-    font-size: 16px;
-    line-height: 36px;
-    text-shadow: 0.1em 0.1em 0.2em #666666;
-`;
 
 
 export const Info = styled.div`
@@ -152,12 +148,16 @@ export const Info = styled.div`
     a{
         display: block;
     }
-`;
+
+    @media(max-width:768px){
+        flex-direction: column;
+        min-height: fit-content;
+    }
+    `;
 
 export const Box = styled.div`
     width: 25%;
     height: 40vh;
-    font-size: 80%;
     line-height: 1.5;
     a{
         cursor: pointer;
@@ -165,11 +165,27 @@ export const Box = styled.div`
             filter: invert(12%) sepia(25%) saturate(7074%) 
             hue-rotate(219deg) brightness(103%) contrast(93%);
         }
-        }
+    }
+    p,a{
+        font-size: 0.8rem;
+    }
+    @media(max-width:768px){
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+    
+export const Title = styled.h2`
+    font-size: 14px;
+    /* line-height: 36px; */
+    text-shadow: 0.1em 0.1em 0.2em #666666;
 `;
 
-export const TitleInfo = styled.p`
-        font-size: 1.5rem;
+export const TitleInfo = styled.h2`
+        font-size: 15px;
         margin-bottom: 10px;
 `;
 
@@ -190,11 +206,9 @@ export const Form = styled.form`
 export const TitleForm = styled.p`
     color: #fff;
     font-size: 1.5rem;
-    font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: bold;
     margin-right: 2rem;
-    /* line-height: 33px; */
 
     @media(max-width: 768px){
         margin: 0;

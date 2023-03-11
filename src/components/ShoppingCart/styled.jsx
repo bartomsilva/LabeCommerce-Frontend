@@ -46,9 +46,6 @@ export const SubTitlePrice=styled(SubTitleAmount)`
       
 `
 
-
-
-
 export const Products=styled.div`
     display: flex;
     flex-direction: column;

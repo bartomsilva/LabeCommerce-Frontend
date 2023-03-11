@@ -11,7 +11,6 @@ export const ContainerCard = styled.div`
 export const Card = styled.div`
     display: flex;
     gap: 1rem;    
-    /* width: 100%; */
     flex: 1 1 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,19 +38,17 @@ export const Item = styled.div`
     @media(max-width: 768px){
         display: grid;
         width: 95%;
-        grid-template-columns: 80px 260px;
-        grid-template-rows: 200px;
-        grid-template-areas:
-        "image "
-        ;
+        height: fit-content;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 150px;
+        grid-template-areas: "image info" ;
+        justify-content: center;
     }
 `;
 
 export const ContainerImage = styled.div`
-    grid-area: "image containerinfo";
-    
+    grid-area: image;    
 `
-
 export const Image = styled.img`
     width: 60%;
     width: 70%;
@@ -60,8 +57,7 @@ export const Image = styled.img`
     margin-top: 15px;
 
     @media(max-width: 768px){
-        width: 100%;              
-
+        width: 100%;          
     }
  
 `;
@@ -74,13 +70,15 @@ export const ContainerInfo = styled.div`
     width: 90%;
     position: absolute;
     bottom: 0;
-    grid-area: "containerinfo";
+    grid-area: info;
 
     @media(max-width:768px){
+        position: static;
         flex-direction: row;
-        width: 250px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
     }
-
 `;
 
 export const Info = styled.div`
@@ -132,7 +130,7 @@ export const ImgAddCart = styled.div`
         transform: scale(1.5);
     }
     @media(max-width:768px){
-        position: inherit;
+        position: static;
     }
 `;
 

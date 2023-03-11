@@ -70,9 +70,9 @@ export default function Footer() {
                         <li>
                             <img src="/static/icons/payment/aura.svg" loading="lazy" alt="image payment" />
                         </li>
-                        <li>
+                        {/* <li>
                             <img src="/static/icons/payment/diners.svg" loading="lazy" alt="image payment" />
-                        </li>
+                        </li> */}
                         <li>
                             <img src="/static/icons/payment/elo.svg" loading="lazy" alt="image payment" />
                         </li>
@@ -94,10 +94,8 @@ export default function Footer() {
                     <s.TitleInfo>central de atendimento</s.TitleInfo>
                     <a>atendimento</a>
                     <a>termo de compra e venda</a>
-                    <a>arrependimento ou desistência</a>
                     <a>meus pedidos</a>
                     <a>trocas e devoluções</a>
-                    <a>assistência técnica dos fabricantes</a>
                     <a>política de privacidade</a>
                 </s.Box>
                 <s.Box>
@@ -106,19 +104,15 @@ export default function Footer() {
                     <a>nossas lojas</a>
                     <a>portal da Space Toy</a>
                     <a>trabalhe conosco</a>
-                    <a>assessoria de imprensa</a>
-                    <a>investidores</a>
                 </s.Box>
-
                 <s.Box>
                     <s.TitleInfo>compre pelo telefone</s.TitleInfo>
-                    <s.Title>0800 773 3838</s.Title>
+                    <s.Title>0800 003 0003</s.Title>
                     <p>segunda a sexta das 8 às 22h</p>
                     <p>e sábados e domingos</p>
                     <p>das 8 às 20h (exceto feriados)</p>
                     <p>compre também pelo chat online</p>
                 </s.Box>
-
             </s.Info>
             <s.Medidas>
                 <br />

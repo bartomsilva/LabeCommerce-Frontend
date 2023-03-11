@@ -85,6 +85,7 @@ export const BoxFind = styled.div`
 export const BoxAux = styled.div`
     flex: 1 1 auto;
     display: flex;
+    margin-left: 15px;
     justify-content: space-between;
 `
 

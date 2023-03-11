@@ -103,6 +103,10 @@ export const HeaderDetail=styled.div`
     border-bottom: 1px dotted #666666;
 `;
 
+export const HeaderTitle=styled.div`
+    display: flex;
+    
+`	 
 export const ContainerItem=styled.div`
     width:50%;
     min-width: 250px;

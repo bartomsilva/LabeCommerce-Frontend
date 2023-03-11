@@ -14,7 +14,7 @@ export default function ShoppingCart() {
         itemsCart,
         totalCart,
         setItemsCart,
-        setTotalCart
+        setTotalCart        
     } = useContext(ProductsContext)
 
     function renderItemCard(objPro, index) {
@@ -24,19 +24,15 @@ export default function ShoppingCart() {
         const { name, img, price } = dataPro
         return (
             <s.HeaderDetail key={index}>
-                <div>
-                <s.SubTitleProd>produto</s.SubTitleProd>
-                <s.SubTitleAmount>quantidade</s.SubTitleAmount>
-                <s.SubTitlePrice>preço</s.SubTitlePrice>
-                </div>
-
                 <s.ContainerItem>
+                    <s.SubTitleProd>produto</s.SubTitleProd>
                     <s.ItemDetail>
                         <img src={img} alt="" />
                         <p>{name}</p>
                     </s.ItemDetail>
                 </s.ContainerItem>
                 <s.ContainerAmount>
+                    <s.SubTitleAmount>quantidade</s.SubTitleAmount>
                     <s.ControlAmount>
                         <img onClick={() => handlerMinus(index, cart, setCart)}
                             src="/static/icons/item_minus.svg"
@@ -51,13 +47,14 @@ export default function ShoppingCart() {
                     </s.ButtonRemove>
                 </s.ContainerAmount>
                 <s.ContainerPrice>
+                    <s.SubTitlePrice>preço</s.SubTitlePrice>
                     <s.OldPrice>{currencyBrazil(+price * 1.30)}</s.OldPrice>
                     <s.Price>{currencyBrazil(price, true)}</s.Price>
                 </s.ContainerPrice>
             </s.HeaderDetail>
         )
     }
-
+    
     return (
         <s.Container>
             <s.Products>
@@ -121,11 +118,12 @@ function handlerPlus(nIndex, array, setState) {
     setState(copyArray)
 }
 
-export function updateStatusCart(cart, setItemsCart, setTotalCart) {
-    // atualização dos valore carrinho     
+export function updateStatusCart(cart, setItemsCart,setTotalCart) {
+    // atualização dos valore carrinho 
     const vTotal = cart.reduce((total, atual) => total += (atual.price * atual.amount), 0)
     const vTotalItems = cart.reduce((total, atual) => total += atual.amount, 0)
     setItemsCart(vTotalItems)
     setTotalCart(vTotal)
+    console.log('atualizando',cart)
     saveCart(cart)
 }

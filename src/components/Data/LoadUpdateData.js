@@ -13,6 +13,7 @@ export default function LoadData() {
         setTotalCart,
         setTotalProducts
     } = useContext(ProductsContext)
+
     useEffect(() => {
         (async () => {
             try {
@@ -28,17 +29,22 @@ export default function LoadData() {
     }, [])
 
     // criar ou ler o carrinho
-    useEffect(() => {
-        if (!localStorage.shoppingCart) {
-            saveCart(cart)
-        } else {
-            setCart(JSON.parse(localStorage.getItem("shoppingCart")))
-        }
-    }, [])
 
     useEffect(() => {
+        if (!localStorage.shoppingCart) {
+          saveCart(cart)
+        } else {
+          setCart(JSON.parse(localStorage.getItem("shoppingCart")))
+        }
+      }, [])
+        
+      useEffect(() => {
         updateStatusCart(cart, setItemsCart, setTotalCart)
-    }, [cart])
+      }, [cart])
+
+
+    
+
 }
 
 

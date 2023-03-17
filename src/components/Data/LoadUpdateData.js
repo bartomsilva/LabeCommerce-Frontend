@@ -17,8 +17,8 @@ export default function LoadData() {
     useEffect(() => {
         (async () => {
             try {
-                const response = await axios.get("https://project-react-pilares.bartomsilva.repl.co")
-                // const response = await axios.get("/static/Data.json")
+                // const response = await axios.get("https://project-react-pilares.bartomsilva.repl.co")
+                const response = await axios.get("/static/Data.json")
                 setProducts(response.data);
                 setTotalProducts(response.data.length)
             }

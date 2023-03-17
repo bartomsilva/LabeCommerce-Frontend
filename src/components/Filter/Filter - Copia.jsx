@@ -49,7 +49,6 @@ export default function filterItems() {
             newData = newData.filter(e => e.price >= vMin && e.price <= vMax)
         }
     }
-      
     setTotalProducts(newData.length)
     return newData
 }

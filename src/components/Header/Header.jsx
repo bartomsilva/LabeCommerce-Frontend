@@ -3,19 +3,17 @@ import * as h from './styled'
 import { ProductsContext } from '../Context/ProductsContext'
 import { ContaninerMenuMobile, HeaderMenu } from "./stelydMenuMobile";
 
-const filterIsOn = () => {
-    const name = nameFind.current
-    setFilterName(name.value)
-    // setIsOnOffFilter(true)
-    name.value = ''
-}
-
-function handleOnChange(e, setState) {
-    setState(e.target.value)
-    // setIsOnOffFilter(true)
-}
-
 export default function Header() {
+
+    const filterIsOn = () => {
+        const name = nameFind.current
+        setFilterName(name.value)
+        name.value = ''
+    }
+    
+    function handleOnChange(e, setState) {
+        setState(e.target.value)
+    }
 
     const {
         itemsCart,
@@ -25,8 +23,6 @@ export default function Header() {
     } = useContext(ProductsContext)
 
     const nameFind = useRef(null)
-
-
 
     return (
         <h.Header>

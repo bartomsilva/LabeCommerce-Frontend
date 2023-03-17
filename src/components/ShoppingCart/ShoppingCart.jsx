@@ -126,6 +126,5 @@ export function updateStatusCart(cart, setItemsCart,setTotalCart) {
     const vTotalItems = cart.reduce((total, atual) => total += atual.amount, 0)
     setItemsCart(vTotalItems)
     setTotalCart(vTotal)
-    console.log('atualizando',cart)
     saveCart(cart)
 }

@@ -14,8 +14,9 @@ export default function Main() {
         typeSort,
     } = context
     
-    let arrayRender = [...filterItems()]
-    arrayRender = sortArrayAD(arrayRender, typeSort)
+    // let arrayRender = [...filterItems()]
+    // arrayRender = sortArrayAD(arrayRender, typeSort)
+    const arrayRender = sortArrayAD([...filterItems()], typeSort)
    
     return (
         <ContainerCard>

@@ -60,3 +60,28 @@ export function orderArray(type,setTypeSort) {
 export function saveCart(cart) {
     localStorage.shoppingCart = JSON.stringify(cart)
 }
+
+export function cadUser(formObj){
+
+    /*
+    pegar do forumulari os dados do usuario
+    formData ={
+        email: e,
+        senha: p,
+        nome: n,
+        etc: etc    
+    }
+    */
+    createUserWithEmailAndPassword(auth, email, password)
+    .then( data => {
+        const uid = data.user.uid;
+        const users=firebase.firebase().collection('users');
+        users.doc(uid).set({
+            email: FormData.email, ssssssssss
+        })
+        alert("usuário criado com sucesso!")
+    })
+    .catch(error =>{
+
+    })
+}

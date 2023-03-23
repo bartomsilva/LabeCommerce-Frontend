@@ -25,11 +25,11 @@ export function Select() {
             <div>
                 <button id="order" value="N" onClick={selectt}>ordernar por</button>
                 <ul>
-                    <li><a onClick={() => show("relevância", "N")}>relevância</a></li>
-                    <li><a onClick={() => show("menor preço", 'A')}>menor preço</a></li>
-                    <li><a onClick={() => show("maior preço", "D")}>maior preço</a></li>
-                    <li><a onClick={() => show("a-Z", "AZ")}> de A a Z</a></li>
-                    <li><a onClick={() => show("Z-a", "ZA")}> de Z a A</a></li>
+                    <li onClick={() => show("relevância",  "N")}>relevância</li>
+                    <li onClick={() => show("menor preço", 'A')}>menor preço</li>
+                    <li onClick={() => show("maior preço", "D")}>maior preço</li>
+                    <li onClick={() => show("a-Z", "AZ")}       >de A a Z</li>
+                    <li onClick={() => show("Z-a", "ZA")}       >de Z a A</li>
                 </ul>
             </div>
         </BoxSelect>

@@ -7,11 +7,11 @@ import Reset from './styles/Reset'
 import Base from './styles/base'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-      <Reset />
-      <Base />
-      <ProductsProvider>
-        <App />
-      </ProductsProvider>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Reset />
+    <Base />
+    <ProductsProvider>
+      <App />
+    </ProductsProvider>
+  </BrowserRouter>
 )

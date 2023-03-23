@@ -103,7 +103,8 @@ export const CadUser = styled.div`
 
     span{
         display: block;
-        color: #666666
+        color: #666666;
+        margin: 0 5px;
     }
    
 

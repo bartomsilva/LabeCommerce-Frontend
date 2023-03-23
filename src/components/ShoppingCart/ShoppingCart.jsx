@@ -1,5 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ProductsContext } from "../Context/ProductsContext";
+import { useNavigate } from "react-router-dom";
 
 import * as s from "./styled";
 import { currencyBrazil, saveCart } from "../Libs/MyLib";
@@ -9,13 +10,14 @@ export default function ShoppingCart() {
     const {
         cart,
         setCart,
-        setViewCart,
         products,
         itemsCart,
-        totalCart,
-        setItemsCart,
-        setTotalCart        
+        totalCart
+        // setItemsCart,
+        // setTotalCart
     } = useContext(ProductsContext)
+
+    const navigate = useNavigate()
 
     function renderItemCard(objPro, index) {
         const codePro = objPro.code
@@ -42,9 +44,6 @@ export default function ShoppingCart() {
                             src="/static/icons/item_plus.svg"
                             alt="item plus" data-codepro={index} />
                     </s.ControlAmount>
-                    {/* <s.ButtonRemove onClick={() => removeItem(codePro, cart, setCart)}>
-                        remover
-                    </s.ButtonRemove> */}
                 </s.ContainerAmount>
                 <s.ContainerPrice>
                     <s.SubTitlePrice>preço</s.SubTitlePrice>
@@ -54,7 +53,7 @@ export default function ShoppingCart() {
             </s.HeaderDetail>
         )
     }
-    
+
     return (
         <s.Container>
             <s.Products>
@@ -87,10 +86,14 @@ export default function ShoppingCart() {
                     </ul>
                 </div>
                 <div>
-                    <s.Button>Confirmar Pedido</s.Button>
+                    <s.Button onClick={() => cart.length ?
+                        navigate("/purchaseconfirmation") :
+                        navigate('/emptycart')}>
+                        Confirmar Pedido
+                    </s.Button>
                 </div>
                 <div>
-                    <s.Button onClick={() => setViewCart(false)}>Fechar Carrinho</s.Button>
+                    <s.Button onClick={() => navigate("/")}>Continuar comprando...</s.Button>
                 </div>
             </s.Summary>
         </s.Container>
@@ -109,7 +112,7 @@ function handlerMinus(nIndex, array, setState) {
     if (nAmount > 1) {
         copyArray[nIndex].amount--
     } else {
-        copyArray.splice(nIndex,1)
+        copyArray.splice(nIndex, 1)
     }
     setState(copyArray)
 }
@@ -120,7 +123,7 @@ function handlerPlus(nIndex, array, setState) {
     setState(copyArray)
 }
 
-export function updateStatusCart(cart, setItemsCart,setTotalCart) {
+export function updateStatusCart(cart, setItemsCart, setTotalCart) {
     // atualização dos valore carrinho 
     const vTotal = cart.reduce((total, atual) => total += (atual.price * atual.amount), 0)
     const vTotalItems = cart.reduce((total, atual) => total += atual.amount, 0)

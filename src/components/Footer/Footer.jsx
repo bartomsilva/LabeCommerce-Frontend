@@ -29,7 +29,7 @@ export default function Footer() {
 
     return (
         <s.Footer>
-            <s.Form onSubmit={handleSubmit(newUser)}>
+            {/* <s.Form onSubmit={handleSubmit(newUser)}>
                 <s.TitleForm>Cadastre-se para receber nossas ofertas!</s.TitleForm>
                 <s.Filds>
                     <s.ContainerFild>
@@ -48,7 +48,7 @@ export default function Footer() {
                     </s.ContainerFild>
                 </s.Filds>
                 <s.Button>Cadastrar</s.Button>
-            </s.Form>
+            </s.Form> */}
 
             <s.Container>
                 <s.NetWorks>
@@ -107,17 +107,17 @@ export default function Footer() {
                 </s.Box>
                 <s.Box>
                     <s.TitleInfo>compre pelo telefone</s.TitleInfo>
-                    <s.Title>0800 003 0003</s.Title>
+                    <s.TitleInfo>0800 010 1001</s.TitleInfo>
                     <p>segunda a sexta das 8 às 22h</p>
                     <p>e sábados e domingos</p>
                     <p>das 8 às 20h (exceto feriados)</p>
                     <p>compre também pelo chat online</p>
                 </s.Box>
             </s.Info>
-            <s.Medidas>
+            {/* <s.Medidas>
                 <br />
                 <span>@by bart-silva -- Altura{window.screen.height}--- Lagura{window.screen.width}</span>
-            </s.Medidas>
+            </s.Medidas> */}
 
         </s.Footer>
 

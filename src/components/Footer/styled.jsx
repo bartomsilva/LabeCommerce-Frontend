@@ -48,6 +48,7 @@ export const Container = styled.div`
 
 export const NetWorks = styled.div`
     
+    padding-top: 30px;
     margin-left: 32px;
     width: 30%;
 
@@ -180,8 +181,9 @@ export const Box = styled.div`
     
 export const Title = styled.h2`
     font-size: 14px;
+    padding-top: 30px;
     /* line-height: 36px; */
-    text-shadow: 0.1em 0.1em 0.2em #666666;
+    /* text-shadow: 0.1em 0.1em 0.2em #666666; */
 `;
 
 export const TitleInfo = styled.h2`
@@ -229,7 +231,7 @@ export const Filds = styled.div`
     }
 
     input{
-        width: 200px; 
+        width: 300px; 
         height: 30px;
         border: 2px solid rgba(208, 207, 207, 0.5);
         padding: 0 5px;
@@ -256,7 +258,7 @@ export const ContainerFild = styled.div`
     background-color: #f7f7f7;
     min-height: 60px;
     height: fit-content;
-    width: 250px;
+    width: 320px;
     border-radius: 6px;
     overflow: hidden;
 

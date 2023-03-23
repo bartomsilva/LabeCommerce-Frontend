@@ -2,8 +2,11 @@ import { useRef, useContext, useState } from 'react'
 import * as h from './styled'
 import { ProductsContext } from '../Context/ProductsContext'
 import { ContaninerMenuMobile, HeaderMenu } from "./stelydMenuMobile";
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+
+    const navigate = useNavigate()
 
     const filterIsOn = () => {
         const name = nameFind.current
@@ -17,10 +20,10 @@ export default function Header() {
 
     const {
         itemsCart,
-        setViewCart,
         setFilterName,
         setFilterSector
     } = useContext(ProductsContext)
+
 
     const nameFind = useRef(null)
 
@@ -37,11 +40,13 @@ export default function Header() {
                 </h.BoxFind>
                 <h.BoxAux>
                     <h.CadUser>
-                        <span>Olá, </span><a href='#'>faça seu login</a> ou <a href='#'>cadastre-se</a>
+                        <span>Olá,</span><a href='#'>faça seu login</a><span> ou </span><a href='#'>cadastre-se</a>
                     </h.CadUser>
                     <h.Cart>
                         <span>{itemsCart}</span>
-                        <img onClick={() => setViewCart(true)} src="/static/icons/cart_view.svg" alt='cart image' />
+                        <img onClick={() =>itemsCart?
+                            navigate("/shoppingcart"):
+                            navigate("/emptycart")} src="/static/icons/cart_view.svg" alt='cart image' />
                     </h.Cart>
                 </h.BoxAux>
             </h.Container>

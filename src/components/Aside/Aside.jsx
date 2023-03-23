@@ -15,14 +15,15 @@ export default function Aside() {
     const {
         filterPrice,
         filterSector,
+        filterName,
         totalProducts,
         setFilterPrice
     } = useContext(ProductsContext)
 
     if (filterSector && filterSector.length) {
-        sectorName = nameSector[filterSector]
+        sectorName = nameSector[filterSector] 
     } else {
-        sectorName = "Todos Produtos"
+        sectorName = "Todos Produtos" 
     }
 
     const onFind = () => {
@@ -50,11 +51,10 @@ export default function Aside() {
             </span>
         }
     }
-
     return (
         <s.Aside>
             <div>
-                <s.AsideTitle>{sectorName}</s.AsideTitle>
+                <s.AsideTitle>{sectorName} {filterName.length?"( "+filterName+" )":""}</s.AsideTitle>
                 <s.AsideAmount>{totalProducts} produtos {showFilterPrice()} </s.AsideAmount>
             </div>
             <s.FindPrice>

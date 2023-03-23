@@ -54,8 +54,6 @@ export const FindPrice = styled.div`
     align-items: baseline;
     height: 60px;
 
-
-
     input{
         width: 85px;
         height: 25px;

@@ -1,11 +1,10 @@
+import axios from "axios"
 import { useContext, useEffect } from "react"
 import { ProductsContext } from "../Context/ProductsContext"
-import axios from "axios"
 import { saveCart } from "../Libs/MyLib"
 import { updateStatusCart } from "../ShoppingCart/ShoppingCart"
 
 export default function LoadData() {
-  // const response = await axios.get("https://project-react-pilares.bartomsilva.repl.co")
   const {
     cart,
     setCart,
@@ -14,11 +13,12 @@ export default function LoadData() {
     setTotalCart,
     setTotalProducts
   } = useContext(ProductsContext)
-
+  
   // ler dados dos produtos
   useEffect(() => {
     (async () => {
       try {
+        // const response = await axios.get("https://project-react-pilares.bartomsilva.repl.co")
         const response = await axios.get("/static/Data.json")
         setProducts(response.data);
         setTotalProducts(response.data.length)
@@ -41,9 +41,6 @@ export default function LoadData() {
   useEffect(() => {
     updateStatusCart(cart, setItemsCart, setTotalCart)
   }, [cart])
-
-
-
 
 }
 

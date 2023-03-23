@@ -30,15 +30,11 @@ export default function Main() {
                             <ContainerInfo>
                                 <Info>
                                     <Title>{prod.name}</Title>
-                                    <OldPrice>{currencyBrazil(+prod.price * 1.30)}</OldPrice>
+                                    <OldPrice>{currencyBrazil(+prod.price * 1.30,true)}</OldPrice>
                                     <Price>{currencyBrazil(prod.price, true)}</Price>
-                                    <Xtime>10x de {currencyBrazil(+prod.price / 10)} s/juros </Xtime>
+                                    <Xtime>10x de {currencyBrazil(+prod.price / 10,true)} s/juros </Xtime>
                                 </Info>
-                                {/* <ImgAddCart>
-                                    <img onClick={() => addItemCart({ prod, cart, setCart})}
-                                        src="/static/icons/cart_add.svg" alt="" />
-                                </ImgAddCart> */}
-                                <Button>COMPRAR</Button>
+                                <Button onClick={() => addItemCart({ prod, cart, setCart})}>COMPRAR</Button>
                             </ContainerInfo>
                         </Item>
                     ))

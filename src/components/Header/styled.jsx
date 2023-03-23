@@ -136,17 +136,12 @@ export const Cart = styled.div`
     }
 
     grid-area: cart;
-    /* text-align: right; */
 
     :active {
         transition: 500ms all;
         transform: scale(1.1);
     }
       
-    /* @media (max-width: 768px){
-        flex: 1;
-    } */
-
 `;
 
 
@@ -165,7 +160,7 @@ export const FindImg = styled.img`
 export const Sections = styled.div`
     display: flex; 
     flex-wrap: wrap;
-    min-height: 10vh;
+    min-height: 6vh;
     height: fit-content;
     width: 100%; 
     overflow: hidden;

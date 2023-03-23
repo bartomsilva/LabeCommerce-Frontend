@@ -3,7 +3,7 @@ import { ProductsContext } from '../Context/ProductsContext'
 
 import filterItems from "../Filter/Filter";
 import { currencyBrazil, sortArrayAD } from '../Libs/MyLib'
-import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage } from "./styled";
+import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage, Button } from "./styled";
 
 
 export default function Main() {
@@ -34,10 +34,11 @@ export default function Main() {
                                     <Price>{currencyBrazil(prod.price, true)}</Price>
                                     <Xtime>10x de {currencyBrazil(+prod.price / 10)} s/juros </Xtime>
                                 </Info>
-                                <ImgAddCart>
+                                {/* <ImgAddCart>
                                     <img onClick={() => addItemCart({ prod, cart, setCart})}
                                         src="/static/icons/cart_add.svg" alt="" />
-                                </ImgAddCart>
+                                </ImgAddCart> */}
+                                <Button>COMPRAR</Button>
                             </ContainerInfo>
                         </Item>
                     ))

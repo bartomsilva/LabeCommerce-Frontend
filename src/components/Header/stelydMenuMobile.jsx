@@ -61,8 +61,7 @@ export const HeaderMenu = styled.div`
     top:0;
     left: 0;
     opacity: 0;
-    width: 100vw;
-    
+    width: 100%;
     
     button{
         width: 45px;

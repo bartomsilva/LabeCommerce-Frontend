@@ -134,3 +134,18 @@ export const ImgAddCart = styled.div`
     }
 `;
 
+export const Button=styled.button`
+    width: 100%;
+    height: 40px;
+    margin-top: 6px;
+    color: #fff;
+    border: none;
+    background-color: orange;
+    border-radius: 6px;
+    cursor: pointer;
+    :active{
+        transform: scale(.9);
+        transition-duration: 300ms;
+    }
+`;
+

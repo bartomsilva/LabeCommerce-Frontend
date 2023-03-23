@@ -18,15 +18,6 @@ export const Aside = styled.aside`
         padding: 10px;
         border-radius: 9px;
     }
-
-    /* button{
-        width: 80px;
-        margin-top: 0.1rem;
-        height: 2.3rem;
-        border-radius: 9px;
-        border: none;
-        cursor: pointer;
-    }    */
 `;
 
 export const AsideTitle = styled.span`

@@ -21,6 +21,11 @@ const ContainerPurchase = styled.div`
     h2{
         margin-bottom: 20px;
     }
+    @media(max-width:768px){
+        h1{
+            font-size: 20px;
+        }
+    }
  
 `
 const Main = styled.main`
@@ -46,6 +51,10 @@ const BoxProd = styled.div`
     img{
         width: 60px;
         margin: 6px;
+    }
+    @media(max-width:768px){
+        display: flex;
+        flex-wrap: wrap;
     }
 `
 const Footer = styled.footer`
@@ -113,7 +122,7 @@ export default function PurchaseConfirmation() {
                         renderItem(e, index)
                     )
                 }
-                <h2>Totais: {itemsCart} ítens, {currencyBrazil(totalCart, true)}</h2>
+                <h2>Total: {itemsCart} {itemsCart>1?"ítens":"ítem"}, {currencyBrazil(totalCart, true)}</h2>
             </Main>
 
             <Footer>

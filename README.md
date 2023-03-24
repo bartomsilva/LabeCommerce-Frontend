@@ -30,7 +30,7 @@ yarn dev
 
 ### Requisitos do Projeto / Funcionalidades
 ```bash
-O projeto consistirá em 3 grandes partes:
+O projeto consiste em 3 grandes partes:
 
 1. Home
     - Mostrando todos os produtos
@@ -47,7 +47,6 @@ O projeto consistirá em 3 grandes partes:
 3. Filtro
     - Por valor mínimo e máximo
     - Por nome do produto
-    - **Adicionei Filtro por Categoria 
 
 - Home (Lista de Produtos)
     - [x]  O usuário deve ser capaz de visualizar uma lista de produtos
@@ -81,12 +80,13 @@ O projeto consistirá em 3 grandes partes:
     de uma das opções.
 
 * Exemplo
+
 ![image](https://user-images.githubusercontent.com/106079184/226874729-e193572f-1b03-4ca2-9c41-4825e9cd6bd0.png)
 
 
 ## Responsividade 
-- Totalmente responsivo
-- obs: ainda precisa de alguns ajustes finos
+- Totalmente responsivo*
+- *obs: ainda precisa de alguns ajustes finos
 
 
 ### Bibliotecas Utilizadas

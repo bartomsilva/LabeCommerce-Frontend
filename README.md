@@ -2,7 +2,7 @@
 
 Space Toys: É meu primeiro projeto utilizando o React JS, o objetivo é funcionar como o front-end de um e-commerce, 
 seguindo uma lista pré-definida de exigências, para construção deste projeto utilizei além do básico exigido, os conceitos 
-de Estado Global, navegação por Rotas, utilei o axios para leitura do cadastro de produtos e funções assincronas.
+de Estado Global, navegação por Rotas, o axios para leitura do cadastro de produtos e funções assincronas.
 
 ## 🔗Link de Acesso
 - Deploy Surge: [clique aqui!](https://bart-silva-spacetoys.surge.sh/).

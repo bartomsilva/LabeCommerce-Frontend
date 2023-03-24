@@ -1,12 +1,17 @@
 ## 📖 Introdução 
 
-Esse é o meu projeto de introdução aos fundamentos do React, cujo objetivo é que funcionar como o front-end de um E-Commerce, seguindo uma lista pré-definida de exigências. Apliquei os conceitos abaixo e outros (**)  por conta própria. 
+Space Toys: É meu primeiro projeto utilizando o React JS, o objetivo é funcionar como o front-end de um e-commerce, 
+seguindo uma lista pré-definida de exigências, para construção deste projeto utilizei além do básico exigido, os conceitos 
+de Estado Global, navegação por Rotas, utilei o axios para leitura do cadastro de produtos e funções assincronas.
 
 ## 🔗Link de Acesso
 - Deploy Surge: [clique aqui!](https://bart-silva-spacetoys.surge.sh/).
 
 ## 📄Concepção do Projeto
 
+### Criação
+ - Foi utilizado o VITE
+  
 ### Instalando
 ```bash
 # Instalando dependências
@@ -23,9 +28,27 @@ yarn dev
 ### Layout Desktop
 
 
-
-### Requisitos do Projeto
+### Requisitos do Projeto / Funcionalidades
 ```bash
+O projeto consistirá em 3 grandes partes:
+
+1. Home
+    - Mostrando todos os produtos
+    - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
+    - Produtos:
+        - Devem ter um botão que permita adicioná-los ao carrinho
+        - Devem exibir o nome, preço e imagem em um card	
+        
+2. Carrinho
+    - Mostrar todos os produtos e quantidades adicionadas
+    - Capacidade de remover itens do carrinho
+    - Mostrar o valor total do carrinho   
+      
+3. Filtro
+    - Por valor mínimo e máximo
+    - Por nome do produto
+    - **Adicionei Filtro por Categoria 
+
 - Home (Lista de Produtos)
     - [x]  O usuário deve ser capaz de visualizar uma lista de produtos
     - [x]  O usuário deve ser capaz de visualizar os dados do produto (nome, preço e imagem)
@@ -44,6 +67,27 @@ yarn dev
     - [x]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
     - [x]  O usuário deve ser capaz de retornar à visualização sem filtros
 ```
+
+### Funcionalidades que Adicionei
+    - [x]  Filtro por Categoria (permite escolher um grupo de produtos)
+    - [x]  Ordenação me ordem Alfabética ( permite selecionar se é ascendente ou decrescente) 
+    
+ ## *** desafios *** 
+   - [x]  Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
+
+## Funções implemetadas
+-   Criei um componente similar ao select para poder personalizar; trata-se de uma div customizada que comporta um menu vertical
+    com as opções de ordenação, esse menu fica escodido e só aparece ao clicar na caixa de seleção e é recolhido após a seleção
+    de uma das opções.
+
+* Exemplo
+![image](https://user-images.githubusercontent.com/106079184/226874729-e193572f-1b03-4ca2-9c41-4825e9cd6bd0.png)
+
+
+## Responsividade 
+- Totalmente responsivo
+- obs: ainda precisa de alguns ajustes finos
+
 
 ### Bibliotecas Utilizadas
 
@@ -65,110 +109,10 @@ sweetalert
 ![React](https://user-images.githubusercontent.com/106079184/227620813-6e3311e8-9992-407a-8cae-abf2711f1af8.png)
 ![React Router](https://user-images.githubusercontent.com/106079184/227621258-7a953c29-092e-43e6-a688-5d08279d7818.png)
 ![Styled-Components](https://user-images.githubusercontent.com/106079184/227621509-7956f644-df78-41b1-a26d-ec88112b7de1.png)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![image](https://user-images.githubusercontent.com/106079184/227618657-2fd85fe5-dee7-4544-bb4f-9910ed3ca289.png)
+![SweetAlert](https://user-images.githubusercontent.com/106079184/227622475-afbfe25f-92f9-443d-bd50-bd93ba18fa4d.png)
+![Git](https://user-images.githubusercontent.com/106079184/227621865-d6fd9ff4-2e10-4f7f-9759-f31c6434b565.png)
 
 
 ## 📫 Contato
 - linkedin: https://www.linkedin.com/in/bart-silva-br/
-
-
-
-- JSX
-- Componentes
-- Props
-- Estado
-- Fluxo de dados no React
-- Renderização de listas
-- Renderização condicional
-- localStorage
-- Styled-components
-
-- **Estado Global **
-- **axios ( leitura dos produtos ) **
-- **funções assincronas ( async / await ) **
-
-**Imagem ( leitura dos dados )
-
-![image](https://user-images.githubusercontent.com/106079184/226871508-82b86aa5-35b7-492c-9462-1a5fe22f00a2.png)
-
-
-## Instruções para construção do Projeto
-
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
-
-# Requisitos
-
-O projeto consistirá em 3 grandes partes:
-
-1. Home
-    - Mostrando todos os produtos
-    - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
-    - Produtos:
-        - Devem ter um botão que permita adicioná-los ao carrinho
-        - Devem exibir o nome, preço e imagem em um card	
-        
-2. Carrinho
-    - Mostrar todos os produtos e quantidades adicionadas
-    - Capacidade de remover itens do carrinho
-    - Mostrar o valor total do carrinho   
-      
-3. Filtro
-    - Por valor mínimo e máximo
-    - Por nome do produto
-    - **Adicionei Filtro por Categoria 
-
-### Lista de Requisitos
-
-    - [x]  **Adicionei Filtro por Categoria
-    - [x]  **Adicionei ordenação Alfabética  
-    
- ## *** desafios *** 
-   - [x]  Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
-
-## Funções implemetadas
-
--   Criei um componente similar ao select para poder personalizar; trata-se de uma div customizada que comporta um menu vertical
-    com as opçoes de ordenação, esse menu fica escodido e só aparece ao clicar na caixa de seleção e é recolhido após a seleção
-    de uma das opções.
-* Resultado
-```
-![image](https://user-images.githubusercontent.com/106079184/226874729-e193572f-1b03-4ca2-9c41-4825e9cd6bd0.png)
-
-* Parte do código
-![image](https://user-images.githubusercontent.com/106079184/226875257-c1befd9d-03d8-473e-9259-69cd5652f111.png)
-
-
-## Criei os dados dos produtos no formato JSON 
-
-```jsx
-{
-        "code": "t01",
-        "name": "Astronauta Barry",
-        "price": 250,
-        "age": "all",
-        "sector": "toys",
-        "img": "https://uploaddeimagens.com.br/images/004/358/976/original/astronauta_barry.jpg?1676768634"
-    }
-```
-- A leitura dos dados se dá através de uma função assíncrona e utilizando o axios.
-
-
-## Responsividade 
-- Conta com um menu
-- ainda precisa de alguns ajustes no layout da página
-
-## 
-
-
-
-
-
-
-
-
-
-
-
-
 

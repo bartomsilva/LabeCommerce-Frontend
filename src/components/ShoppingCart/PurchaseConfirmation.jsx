@@ -60,8 +60,6 @@ const BoxProd = styled.div`
 const Footer = styled.footer`
     width: 150px;
 `
-let isStart = true
-
 export default function PurchaseConfirmation() {
 
     const navigate = useNavigate()

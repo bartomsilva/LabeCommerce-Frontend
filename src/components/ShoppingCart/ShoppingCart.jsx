@@ -13,8 +13,6 @@ export default function ShoppingCart() {
         products,
         itemsCart,
         totalCart
-        // setItemsCart,
-        // setTotalCart
     } = useContext(ProductsContext)
 
     const navigate = useNavigate()
@@ -36,11 +34,11 @@ export default function ShoppingCart() {
                 <s.ContainerAmount>
                     <s.SubTitleAmount>quantidade</s.SubTitleAmount>
                     <s.ControlAmount>
-                        <img onClick={() => handlerMinus(index, cart, setCart)}
+                        <img onClick={() => handleAmount(index, cart, setCart,-1)}
                             src="/static/icons/item_minus.svg"
                             alt="item minus" />
                         <span>{amount}</span>
-                        <img onClick={() => handlerPlus(index, cart, setCart)}
+                        <img onClick={() => handleAmount(index, cart, setCart,1)}
                             src="/static/icons/item_plus.svg"
                             alt="item plus" data-codepro={index} />
                     </s.ControlAmount>
@@ -101,10 +99,24 @@ export default function ShoppingCart() {
 }
 
 
-// function removeItem(nCode, array, setState) {
-//     const copyArray = array.filter(item => item.code != nCode)
-//     setState(copyArray)
-// }
+function handleAmount(nIndex, array, setState, xAmount) {
+    const copyArray = [...array]
+    const nAmount = copyArray[nIndex].amount
+    
+    if (xAmount===-1){
+        if (nAmount > 1) {
+        // diminui 1
+        copyArray[nIndex].amount--
+        } else {
+        // remove ou item
+            copyArray.splice(nIndex, 1)
+        }
+    } else{
+        // adiciona 1
+        copyArray[nIndex].amount++
+    }
+    setState(copyArray)
+}
 
 function handlerMinus(nIndex, array, setState) {
     const copyArray = [...array]

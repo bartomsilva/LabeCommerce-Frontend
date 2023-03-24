@@ -19,13 +19,11 @@ export default function Header() {
         name.value = ''
     }
 
-
     const {
         itemsCart,
         setFilterName,
         setFilterSector
     } = useContext(ProductsContext)
-
 
     const nameFind = useRef(null)
 

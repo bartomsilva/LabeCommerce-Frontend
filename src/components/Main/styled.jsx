@@ -115,7 +115,6 @@ export const Xtime = styled.span`
     color: rgb(123, 123, 123);
     margin-bottom: 7px;
 `;
-
 export const Button = styled.button`
     width: 100%;
     height: 40px;
@@ -142,4 +141,6 @@ export const Button = styled.button`
         height: fit-content;        
     }
 `;
+
+
 

@@ -45,7 +45,6 @@ export default function Main() {
     )
 }
 
-
 function addItemCart(props) {
    
     const { prod, cart, setCart} = props

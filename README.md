@@ -23,9 +23,14 @@ yarn dev
 
 ### Layout Mobile
 
+|![image](https://user-images.githubusercontent.com/106079184/227629422-fe5daab1-75b1-43c9-afde-6afb035c1e9b.png)|
+![image](https://user-images.githubusercontent.com/106079184/227629547-34942536-c771-48a2-a0cf-aa0645c54885.png)
 
 
 ### Layout Desktop
+
+![image](https://user-images.githubusercontent.com/106079184/227629264-108990f9-de46-45c6-80ae-a797c904d8b9.png)
+
 
 
 ### Requisitos do Projeto / Funcionalidades

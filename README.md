@@ -84,8 +84,7 @@ O projeto consiste em 3 grandes partes:
     com as opções de ordenação, esse menu fica escodido e só aparece ao clicar na caixa de seleção e é recolhido após a seleção
     de uma das opções.
 
-* Exemplo
-
+## Exemplo
 ![image](https://user-images.githubusercontent.com/106079184/226874729-e193572f-1b03-4ca2-9c41-4825e9cd6bd0.png)
 
 

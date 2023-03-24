@@ -4,6 +4,8 @@ import { ProductsContext } from "../Context/ProductsContext"
 import { saveCart } from "../Libs/MyLib"
 import { updateStatusCart } from "../ShoppingCart/ShoppingCart"
 
+let onRestart=true
+
 export default function LoadData() {
   const {
     cart,
@@ -39,7 +41,8 @@ export default function LoadData() {
   }, [])
 
   useEffect(() => {
-    updateStatusCart(cart, setItemsCart, setTotalCart)
+    if(!onRestart) updateStatusCart(cart, setItemsCart, setTotalCart)
+    onRestart=false
   }, [cart])
 
 }

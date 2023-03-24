@@ -60,8 +60,7 @@ sweetalert
 
 ## 💻Tecnologias 
 
-![HTML](https://user-images.githubusercontent.com/106079184/227619486-05895df5-ff59-4ced-aecc-f8bced4b8878.png)
-![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![HTML](https://user-images.githubusercontent.com/106079184/227619717-c4db62a8-9644-4167-87b8-e8d9ef3e6927.png)![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)

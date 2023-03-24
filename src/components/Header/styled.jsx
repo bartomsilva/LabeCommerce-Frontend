@@ -21,6 +21,7 @@ export const Container = styled.div`
     background-color: #fff;
     border-bottom: 2px solid rgb(0, 0, 0, 0.1);
     padding-top: 20px;
+    padding: 0 10px;
 
     display: flex;
     flex-wrap: wrap;
@@ -140,6 +141,9 @@ export const Cart = styled.div`
     :active {
         transition: 500ms all;
         transform: scale(1.1);
+    }
+    @media(max-width:768px){
+
     }
       
 `;

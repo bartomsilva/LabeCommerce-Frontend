@@ -3,6 +3,11 @@ import * as h from './styled'
 import { ProductsContext } from '../Context/ProductsContext'
 import { ContaninerMenuMobile, HeaderMenu } from "./stelydMenuMobile";
 import { useNavigate } from 'react-router-dom';
+import { modal } from '../Libs/MyLib'
+
+function handlerOnChange(e, setState) {
+    setState(e.target.value)
+}
 
 export default function Header() {
 
@@ -13,10 +18,7 @@ export default function Header() {
         setFilterName(name.value)
         name.value = ''
     }
-    
-    function handleOnChange(e, setState) {
-        setState(e.target.value)
-    }
+
 
     const {
         itemsCart,
@@ -40,12 +42,12 @@ export default function Header() {
                 </h.BoxFind>
                 <h.BoxAux>
                     <h.CadUser>
-                        <span>Olá,</span><a href='#'>faça seu login</a><span> ou </span><a href='#'>cadastre-se</a>
+                        <span>Olá,</span><a onClick={()=>modal("Aviso!", "Rotina em desenvolvimento",false)} href='#'>faça seu login</a><span> ou </span><a onClick={()=>modal("Aviso!", "Rotina em desenvolvimento",false)} href='#'>cadastre-se</a>
                     </h.CadUser>
                     <h.Cart>
                         <span>{itemsCart}</span>
-                        <img onClick={() =>itemsCart?
-                            navigate("/shoppingcart"):
+                        <img onClick={() => itemsCart ?
+                            navigate("/shoppingcart") :
                             navigate("/emptycart")} src="/static/icons/cart_view.svg" alt='cart image' />
                     </h.Cart>
                 </h.BoxAux>
@@ -75,8 +77,8 @@ function MenuMobile() {
         setFilterSector
     } = useContext(ProductsContext)
 
-    const handleOnChangeMobile = (e, setState) => {
-        handleOnChange(e, setState)
+    function handleOnChangeMobile(e, setState)  {
+        handlerOnChange(e, setState)
         setIsOpen()
     }
 

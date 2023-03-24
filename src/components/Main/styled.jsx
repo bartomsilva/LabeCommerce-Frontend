@@ -55,6 +55,7 @@ export const Image = styled.img`
     object-fit: cover;
     z-index: 999;
     margin-top: 15px;
+    border-radius: 5px;
 
     @media(max-width: 768px){
         width: 100%;          
@@ -73,11 +74,10 @@ export const ContainerInfo = styled.div`
     grid-area: info;
 
     @media(max-width:768px){
-        position: static;
-        flex-direction: row;
         width: 100%;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 `;
 
@@ -116,25 +116,7 @@ export const Xtime = styled.span`
     margin-bottom: 7px;
 `;
 
-export const ImgAddCart = styled.div`
-    position: absolute;
-    bottom: 23px;
-    right: 13px;
-    width: 30px;
-    height: 30px;
-    filter: var(--colorSvg);
-    grid-area: "addcart";
-
-    :active {
-        transition: 500ms all;
-        transform: scale(1.5);
-    }
-    @media(max-width:768px){
-        position: static;
-    }
-`;
-
-export const Button=styled.button`
+export const Button = styled.button`
     width: 100%;
     height: 40px;
     margin-top: 6px;
@@ -146,6 +128,18 @@ export const Button=styled.button`
     :active{
         transform: scale(.9);
         transition-duration: 300ms;
+    }
+    :hover{
+        color: rgba(0,0,0,.6)
+    }
+    @media(max-width:768px){
+        font-size: 80%;
+        bottom: 23px;
+        right: 13px;
+        padding: 5px;
+        width: fit-content;
+        display: block;
+        height: fit-content;        
     }
 `;
 

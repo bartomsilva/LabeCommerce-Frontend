@@ -3,8 +3,9 @@ import { ProductsContext } from '../Context/ProductsContext'
 
 import filterItems from "../Filter/Filter";
 import { currencyBrazil, sortArrayAD } from '../Libs/MyLib'
-import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage, Button } from "./styled";
-
+// import { Card, ContainerCard, ContainerInfo, ImgAddCart, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage, Button } from "./styled";
+import { Card, ContainerCard, ContainerInfo, Info, Item, OldPrice, Price, Title, Xtime, Image, ContainerImage, Button } from "./styled";
+1
 
 export default function Main() {
     const context = useContext(ProductsContext)

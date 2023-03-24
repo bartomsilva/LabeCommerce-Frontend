@@ -85,3 +85,12 @@ export function cadUser(formObj){
 
     })
 }
+
+// JANELA DE AVISOS
+export const modal = (title, text,success) => {
+    if(!success){ 
+        swal(title, text, "error")
+    } else {
+        swal(title, text, "success")
+    }
+}

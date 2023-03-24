@@ -34,11 +34,11 @@ export default function ShoppingCart() {
                 <s.ContainerAmount>
                     <s.SubTitleAmount>quantidade</s.SubTitleAmount>
                     <s.ControlAmount>
-                        <img onClick={() => handleAmount(index, cart, setCart,-1)}
+                        <img onClick={() => handleAmount(index, cart, setCart, -1)}
                             src="/static/icons/item_minus.svg"
                             alt="item minus" />
                         <span>{amount}</span>
-                        <img onClick={() => handleAmount(index, cart, setCart,1)}
+                        <img onClick={() => handleAmount(index, cart, setCart, 1)}
                             src="/static/icons/item_plus.svg"
                             alt="item plus" data-codepro={index} />
                     </s.ControlAmount>
@@ -53,6 +53,7 @@ export default function ShoppingCart() {
     }
 
     return (
+
         <s.Container>
             <s.Products>
                 <div>
@@ -102,16 +103,16 @@ export default function ShoppingCart() {
 function handleAmount(nIndex, array, setState, xAmount) {
     const copyArray = [...array]
     const nAmount = copyArray[nIndex].amount
-    
-    if (xAmount===-1){
+
+    if (xAmount === -1) {
         if (nAmount > 1) {
-        // diminui 1
-        copyArray[nIndex].amount--
+            // diminui 1
+            copyArray[nIndex].amount--
         } else {
-        // remove ou item
+            // remove ou item
             copyArray.splice(nIndex, 1)
         }
-    } else{
+    } else {
         // adiciona 1
         copyArray[nIndex].amount++
     }

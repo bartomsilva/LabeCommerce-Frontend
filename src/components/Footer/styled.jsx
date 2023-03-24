@@ -7,11 +7,11 @@ export const Footer = styled.footer`
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 30vh;
     height: fit-content;
     margin-top: 20px;
     background-color: #f1f1f1;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* min-height: 20vh; */
+    padding-bottom: 20px;
 
     /* aviso de em desenvolvimento */
     h3{
@@ -41,7 +41,6 @@ export const Container = styled.div`
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
     
 `
 
@@ -75,7 +74,6 @@ export const NetWorks = styled.div`
         }
     }
 
-    /* @media (max-width: 768px){ */
         width: 100%;
         margin: 0;
         text-align: center;
@@ -84,10 +82,6 @@ export const NetWorks = styled.div`
             margin: 15px 0 ;
             justify-content: center;
         }
-
-
-    /* } */
-
     
 `
 
@@ -136,8 +130,6 @@ export const PaymentsForms = styled.div`
 `;
 
 
-
-
 export const Info = styled.div`
     display: flex;
     justify-content: center;
@@ -178,7 +170,7 @@ export const Box = styled.div`
         align-items: center;
     }
 `;
-    
+
 export const Title = styled.h2`
     font-size: 14px;
     padding-top: 30px;
@@ -284,8 +276,24 @@ export const Button = styled.button`
     }
 
 `
-
 export const Medidas = styled.div`
-    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    img{
+        cursor: pointer;
+        width: 60px;
+        z-index: 999999;
+    }
+    button{
+        z-index: 999999999999;
+    }
+    @media(max-width:768px){
+        width: 100vw;
+    }
 `
 

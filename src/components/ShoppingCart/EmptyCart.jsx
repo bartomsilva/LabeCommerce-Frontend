@@ -18,6 +18,7 @@ const Message = styled.div`
     align-items: center;
     border: 2px solid rgba(0,0,0,.4);
     border-radius: 10px;
+    text-align: center;
     div{
         width: 150px;
     }

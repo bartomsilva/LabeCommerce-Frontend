@@ -121,6 +121,7 @@ export default function PurchaseConfirmation() {
                     )
                 }
                 <h2>Total: {itemsCart} {itemsCart>1?"ítens":"ítem"}, {currencyBrazil(totalCart, true)}</h2>
+                <p><i>Em breve você receberá em seu e-mail, todas informações sobre seu pedido.</i></p>
             </Main>
 
             <Footer>

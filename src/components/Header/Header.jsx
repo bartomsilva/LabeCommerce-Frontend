@@ -5,7 +5,7 @@ import { ContaninerMenuMobile, HeaderMenu } from "./stelydMenuMobile";
 import { useNavigate } from 'react-router-dom';
 import { modal } from '../Libs/MyLib'
 
-function handlerOnChange(e, setState) {
+function handleOnChange(e, setState) {
     setState(e.target.value)
 }
 
@@ -76,7 +76,7 @@ function MenuMobile() {
     } = useContext(ProductsContext)
 
     function handleOnChangeMobile(e, setState)  {
-        handlerOnChange(e, setState)
+        handleOnChange(e, setState)
         setIsOpen()
     }
 

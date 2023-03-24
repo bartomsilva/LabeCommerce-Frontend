@@ -3,6 +3,25 @@ import { useForm } from "react-hook-form";
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+function gotoPage(path) {
+    switch (path) {
+        case "linkedin":
+            window.location.href = 'https://www.linkedin.com/in/bart-silva-br/'
+            break
+        case "github":
+            window.location.href = 'https://github.com/bartomsilva'
+            break
+        case "facebook":
+            window.location.href = 'https://www.facebook.com/'
+            break
+        case "twitter":
+            window.location.href = 'https://twitter.com/'
+            break
+        case "instagram":
+            window.location.href = 'https://www.instagram.com/'
+            break 
+    }
+}
 export default function Footer() {
 
     const schema = yup.object().shape({
@@ -18,7 +37,7 @@ export default function Footer() {
     const newUser = (user) => {
         // Object.keys(user).forEach(item => {
         //     console.log(`${item} -  ${user[item]}`)
-            
+
         // });
         alert("Obrigado por sua inscrição!!!")
         reset({
@@ -29,35 +48,13 @@ export default function Footer() {
 
     return (
         <s.Footer>
-            {/* <s.Form onSubmit={handleSubmit(newUser)}>
-                <s.TitleForm>Cadastre-se para receber nossas ofertas!</s.TitleForm>
-                <s.Filds>
-                    <s.ContainerFild>
-                        <div>
-                            <span>Nome:</span>
-                            <input type="text" {...register("name")} />
-                        </div>
-                        {errors.name?.message}
-                    </s.ContainerFild>
-                    <s.ContainerFild>
-                        <div>
-                            <span>E-mail:</span>
-                            <input type="email" {...register("email")} />
-                        </div>
-                        {errors.email?.message}
-                    </s.ContainerFild>
-                </s.Filds>
-                <s.Button>Cadastrar</s.Button>
-            </s.Form> */}
-
             <s.Container>
                 <s.NetWorks>
                     <s.Title>ACOMPANHE NAS REDES SOCIAIS</s.Title>
                     <ul>
-                        <li><img src="/static/icons/networks/facebook.svg" loading="lazy" alt="image facebook" /></li>
-                        <li><img src="/static/icons/networks/twitter.svg" alt="image twitter" /></li>
-                        <li><img src="/static/icons/networks/instagram.svg" alt="image instagram" /></li>
-                        <li><img src="/static/icons/networks/youtube.svg" alt="image yotube" /></li>
+                        <li><img onClick={() => gotoPage("facebook")}src="/static/icons/networks/facebook.svg" loading="lazy" alt="image facebook" /></li>
+                        <li><img onClick={() => gotoPage("twitter")} src="/static/icons/networks/twitter.svg" alt="image twitter" /></li>
+                        <li><img onClick={() => gotoPage("instagram")} src="/static/icons/networks/instagram.svg" alt="image instagram" /></li>
                     </ul>
                 </s.NetWorks>
                 <s.PaymentsForms>
@@ -70,9 +67,6 @@ export default function Footer() {
                         <li>
                             <img src="/static/icons/payment/aura.svg" loading="lazy" alt="image payment" />
                         </li>
-                        {/* <li>
-                            <img src="/static/icons/payment/diners.svg" loading="lazy" alt="image payment" />
-                        </li> */}
                         <li>
                             <img src="/static/icons/payment/elo.svg" loading="lazy" alt="image payment" />
                         </li>
@@ -114,12 +108,15 @@ export default function Footer() {
                     <p>compre também pelo chat online</p>
                 </s.Box>
             </s.Info>
-            {/* <s.Medidas>
-                <br />
-                <span>@by bart-silva -- Altura{window.screen.height}--- Lagura{window.screen.width}</span>
-            </s.Medidas> */}
+            <s.Medidas>
+                {/* <br /> */}
+                <img onClick={() => gotoPage("github")} src="/static/icons/networks/github.png" alt="" />
+                <span>@by bart-silva - 2023</span>
+                <img onClick={() => gotoPage("linkedin")} src="/static/icons/networks/linkedin.png" alt="" />
+            </s.Medidas>
 
         </s.Footer>
 
     )
 }
+

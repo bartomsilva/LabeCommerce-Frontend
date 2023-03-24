@@ -18,15 +18,13 @@ yarn dev
 
 ### Layout Mobile
 
-| <img src="./src/assets/layoutMobile1.png" width=200><br><sub>Home Page</sub> | <img src="./src/assets/layoutMobile2.png" width=200><br><sub>Detalhes</sub> |
-| :---: | :---: |
+
 
 ### Layout Desktop
 
-| <img src="./src/assets/layoutdesktop.png" width=600><br> |
-| :---: |
 
-### Exigências
+
+### Requisitos do Projeto
 ```bash
 - Home (Lista de Produtos)
     - [x]  O usuário deve ser capaz de visualizar uma lista de produtos
@@ -68,6 +66,8 @@ sweetalert
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![image](https://user-images.githubusercontent.com/106079184/227618657-2fd85fe5-dee7-4544-bb4f-9910ed3ca289.png)
+
 
 ## 📫 Contato
 - linkedin: https://www.linkedin.com/in/bart-silva-br/

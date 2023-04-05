@@ -15,7 +15,8 @@ export const Container=styled.div`
     background-color: #ffffff;
     
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     flex-wrap: wrap;
 
     border-radius: 5px;
@@ -28,6 +29,10 @@ export const Container=styled.div`
     }
 
 `;
+
+const LogoS = styled.div`
+    display: block;
+`
 
 export const Title=styled.p`
     font-size: 1.2rem;
